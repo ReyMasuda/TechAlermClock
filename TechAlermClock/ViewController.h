@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    int hour;
+    int minutes;
+    int second;
+    
+    IBOutlet UILabel *hourLabel;
+    IBOutlet UILabel *minutesLabel;
+    IBOutlet UILabel *secondLabel;
+    
+    IBOutlet UITextField *hourTF;
+    IBOutlet UITextField *minutesTF;
+    
+    NSTimer *timer;
+}
+
+-(IBAction)setBt;
+-(IBAction)cancelBt;
 
 
 @end

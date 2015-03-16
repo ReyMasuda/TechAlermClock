@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    hourLabel.text = @"0";
+    minutesLabel.text = @"0";
+    secondLabel.text = @"0";
 }
 
 - (void)didReceiveMemoryWarning {
