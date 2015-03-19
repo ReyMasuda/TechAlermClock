@@ -21,6 +21,10 @@
     hourLabel.text = @"0";
     minutesLabel.text = @"0";
     secondLabel.text = @"0";
+    
+    hourTF.delegate = self;
+    minutesTF.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +40,25 @@
     hourLabel.text = hourTF.text;
     minutesLabel.text = minutesTF.text;
     secondLabel.text = @"0";
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"WakeUpMen!!"
+                                                    message:@"WakeUp!!!!!!!!!!!!!!!!!"
+                                                   delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"YEAH", nil];
+    [alert show];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:5
+                                             target:self
+                                           selector:@selector(setBt)
+                                           userInfo:nil
+                                            repeats:YES];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    //キーボードを消す
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
