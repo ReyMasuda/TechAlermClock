@@ -29,7 +29,13 @@
 }
 
 -(IBAction)setBt{
+    hour = [hourTF.text intValue];
+    minutes = [minutesTF.text intValue];
+    second = 0;
     
+    hourLabel.text = hourTF.text;
+    minutesLabel.text = minutesTF.text;
+    secondLabel.text = @"0";
 }
 
 @end
