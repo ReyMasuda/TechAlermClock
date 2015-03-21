@@ -61,4 +61,8 @@
     return YES;
 }
 
+-(void)alert{
+    
+} //わかんない
+
 @end
