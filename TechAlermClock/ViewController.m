@@ -50,7 +50,7 @@
     
     timer = [NSTimer scheduledTimerWithTimeInterval:5
                                              target:self
-                                           selector:@selector(setBt)
+                                           selector:@selector(count)
                                            userInfo:nil
                                             repeats:YES];
 }
@@ -61,7 +61,8 @@
     return YES;
 }
 
--(void)alert{
+-(void)count{
+    
 }
 
 @end
